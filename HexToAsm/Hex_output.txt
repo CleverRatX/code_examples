@@ -1,0 +1,54 @@
+0000: 0C 94 34 00 jmp 0x68
+0002: 0C 94 3E 00 jmp 0x7C
+0004: 0C 94 3E 00 jmp 0x7C
+0006: 0C 94 3E 00 jmp 0x7C
+0010: 0C 94 3E 00 jmp 0x7C
+0012: 0C 94 3E 00 jmp 0x7C
+0014: 0C 94 3E 00 jmp 0x7C
+0016: 0C 94 3E 00 jmp 0x7C
+0020: 0C 94 3E 00 jmp 0x7C
+0022: 0C 94 3E 00 jmp 0x7C
+0024: 0C 94 3E 00 jmp 0x7C
+0026: 0C 94 3E 00 jmp 0x7C
+0030: 0C 94 3E 00 jmp 0x7C
+0032: 0C 94 3E 00 jmp 0x7C
+0034: 0C 94 3E 00 jmp 0x7C
+0036: 0C 94 3E 00 jmp 0x7C
+0040: 0C 94 3E 00 jmp 0x7C
+0042: 0C 94 3E 00 jmp 0x7C
+0044: 0C 94 3E 00 jmp 0x7C
+0046: 0C 94 3E 00 jmp 0x7C
+0050: 0C 94 3E 00 jmp 0x7C
+0052: 0C 94 3E 00 jmp 0x7C
+0054: 0C 94 3E 00 jmp 0x7C
+0056: 0C 94 3E 00 jmp 0x7C
+0060: 0C 94 3E 00 jmp 0x7C
+0062: 0C 94 3E 00 jmp 0x7C
+0064: 11 24       eor r1, r1
+0065: 1F BE       out 0x3F, r1
+0066: CF EF       ldi r28, 0xFF
+0067: D8 E0       ldi r29, 0x08
+0070: DE BF       out 0x3E, r29
+0071: CD BF       out 0x3D, r28
+0072: 0E 94 40 00 call 0x80
+0074: 0C 94 51 00 jmp 0xA2
+0076: 0C 94 00 00 jmp 0x00
+0080: 3D 9A       sbi 0x07, 5
+0081: 81 E0       ldi r24, 0x01
+0082: 91 E0       ldi r25, 0x01
+0083: 89 27       eor r24, r25
+0084: 11 F0       breq .+4
+0085: 45 9A       sbi 0x08, 5
+0086: 01 C0       rjmp .+2
+0087: 45 98       cbi 0x08, 5
+0090: 20 E8       ldi r18, 0x80
+0091: 3A E6       ldi r19, 0x6A
+0092: 4D E1       ldi r20, 0x1D
+0093: 21 50       subi r18, 0x01
+0094: 30 40       sbci r19, 0x00
+0095: 40 40       sbci r20, 0x00
+0096: E1 F7       brne .-8
+0097: 00 00       nop
+00A0: F2 CF       rjmp .-28
+00A1: F8 94       cli
+00A2: FF CF       rjmp .-2
